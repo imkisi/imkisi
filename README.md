@@ -1,4 +1,4 @@
-<img src="helloworld.svg" align="center"> </img>
+<img src="helloworld.svg"> </img>
 
 <p align="center"> 
   
