@@ -12,4 +12,4 @@ Hi there 👋. I am Bagas Dwi Anggoro known as KiSI, a computer science student 
 
 ## Get in touch :coffee:
 
-- [Personal Website](https://kisi.is-a.dev)
+- [Portfolio](https://kisilabs.space)
