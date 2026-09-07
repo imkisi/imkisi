@@ -1,9 +1,3 @@
-
-                
-| . _.| _ |_  _ 
-|(|_)||(_||_)_) 
-                
-               
 <img src="helloworld.svg"> </img>
 
 ## About me
@@ -12,4 +6,4 @@ Hi there 👋. I am Bagas Dwi Anggoro known as KiSI, a computer science student 
 
 ## Get in touch :coffee:
 
-- [Portfolio](https://kisilabs.space)
+- [Portfolio](https://kisilabs.my.id)
