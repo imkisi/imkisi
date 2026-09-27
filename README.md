@@ -1,8 +1,8 @@
-# **kisi\***labs\*
+# **kisi***labs*
 
 <img src="banner.avif" width="max-content"> </img>
 
-Creative Developer & Illustrator focused on interactive systems and web experiences.
+Creative Developer & Illustrator focused on interactive systems and web experiences.</br>
 `TypeScript` · `JavaScript` · `Python` · `Svelte` · `WebGL / Three.js` · `Kotlin`
 
 [Website](https://kisilabs.my.id) · [LinkedIn](https://linkedin.com/in/bagas-d) · [Email](mailto:info@kisilabs.my.id.com) · [Instagram](https://instagram.com/gasswi_)
@@ -22,6 +22,7 @@ Creative Developer & Illustrator focused on interactive systems and web experien
 
 - **Work, Separate & Enjoy:** Focus entirely on doing the work; never create and analyze at the same time; stay happy and lighthearted; and remain open to breaking even your own rules.
 
+    </td>
     </tr>
   </table>
 
