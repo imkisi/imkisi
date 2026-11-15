@@ -243,7 +243,7 @@ def stars_counter(data):
 
 def svg_overwrite(filename, commit_data, star_data, repo_data, contrib_data, follower_data, loc_data):
     with open(filename, 'r', encoding='utf-8') as f:
-        xml_content = re.sub(r'&(?!amp;|lt;|gt;|quot;|apos;|#\d+;|#x[0-9a-fA-F]+;)', '&', f.read())
+        xml_content = re.sub(r'&(?!amp;|lt;|gt;|quot;|apos;|#\d+;|#x[0-9a-fA-F]+;)', '&amp;', f.read())
     root = etree.fromstring(xml_content.encode('utf-8'))
     justify_format(root, 'commit_data', commit_data, 38)
     justify_format(root, 'star_data', star_data, 24)

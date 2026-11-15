@@ -19,7 +19,7 @@ text, tspan {white-space: pre;}
 <tspan x="30" y="30">kisi@kisilabs</tspan> -————————————————————————————————————————————————————————————————————-—-
 <tspan x="30" y="50" class="cc">. </tspan><tspan class="key">OS</tspan>:<tspan class="cc"> ............................................................. </tspan><tspan class="value">Windows 11, Android</tspan>
 <tspan x="30" y="70" class="cc">. </tspan><tspan class="key">Host</tspan>:<tspan class="cc"> ........................................................................ </tspan><tspan class="value">kisilabs</tspan>
-<tspan x="30" y="90" class="cc">. </tspan><tspan class="key">Kernel</tspan>:<tspan class="cc"> ........................................ </tspan><tspan class="value">Creative Technologist &: Software Dev</tspan>
+<tspan x="30" y="90" class="cc">. </tspan><tspan class="key">Kernel</tspan>:<tspan class="cc"> ........................................ </tspan><tspan class="value">Creative Technologist &amp; Software Dev</tspan>
 <tspan x="30" y="110" class="cc">. </tspan><tspan class="key">IDE</tspan>:<tspan class="cc"> ................................................. </tspan><tspan class="value">Android Studio, VS Code, Arduino</tspan>
 <tspan x="30" y="130" class="cc">. </tspan>
 <tspan x="30" y="150" class="cc">. </tspan><tspan class="key">Languages</tspan>.<tspan class="key">Programming</tspan>:<tspan class="cc"> .................................. </tspan><tspan class="value">Kotlin, Python, JS/TS, Svelte</tspan>
