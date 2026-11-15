@@ -3,6 +3,7 @@ import os
 from lxml import etree
 import time
 import hashlib
+import re
 
 HEADERS = {'Authorization': 'Bearer ' + os.environ['ACCESS_TOKEN']}
 USER_NAME = os.environ['USER_NAME']
