@@ -1,7 +1,3 @@
-# **kisi***labs*
-
-<img src="banner.avif" width="max-content"> </img>
-
 <div align="center">
   <a href="https://kisilabs.my.id">
     <picture>
