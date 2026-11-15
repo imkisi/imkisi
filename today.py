@@ -245,14 +245,34 @@ def svg_overwrite(filename, commit_data, star_data, repo_data, contrib_data, fol
     with open(filename, 'r', encoding='utf-8') as f:
         xml_content = re.sub(r'&(?!amp;|lt;|gt;|quot;|apos;|#\d+;|#x[0-9a-fA-F]+;)', '&amp;', f.read())
     root = etree.fromstring(xml_content.encode('utf-8'))
-    justify_format(root, 'commit_data', commit_data, 38)
-    justify_format(root, 'star_data', star_data, 24)
-    justify_format(root, 'repo_data', repo_data, 24)
-    justify_format(root, 'contrib_data', contrib_data)
-    justify_format(root, 'follower_data', follower_data, 20)
-    justify_format(root, 'loc_data', loc_data[2], 33)
-    justify_format(root, 'loc_add', loc_data[0])
-    justify_format(root, 'loc_del', loc_data[1], 7)
+
+    commit_str = f"{commit_data:,}" if isinstance(commit_data, int) else str(commit_data)
+    star_str = f"{star_data:,}" if isinstance(star_data, int) else str(star_data)
+    repo_str = f"{repo_data:,}" if isinstance(repo_data, int) else str(repo_data)
+    contrib_str = f"{contrib_data:,}" if isinstance(contrib_data, int) else str(contrib_data)
+    follower_str = f"{follower_data:,}" if isinstance(follower_data, int) else str(follower_data)
+    loc_main_str = f"{loc_data[2]:,}" if isinstance(loc_data[2], int) else str(loc_data[2])
+    loc_add_str = f"{loc_data[0]:,}" if isinstance(loc_data[0], int) else str(loc_data[0])
+    loc_del_str = f"{loc_data[1]:,}" if isinstance(loc_data[1], int) else str(loc_data[1])
+
+    # Line 40: Repos & Stars (Pipe at column 51, total line length 86)
+    repo_length = 24 - len(contrib_str)
+    justify_format(root, 'repo_data', repo_str, repo_length)
+    justify_format(root, 'contrib_data', contrib_str)
+    justify_format(root, 'star_data', star_str, 25)
+
+    # Line 41: Commits & Followers (Pipe at column 51, total line length 86)
+    justify_format(root, 'commit_data', commit_str, 38)
+    justify_format(root, 'follower_data', follower_str, 21)
+
+    # Line 42: Lines of Code on GitHub (Total line length 86)
+    loc_right_side = f" ( {loc_add_str}++, {loc_del_str}-- )"
+    loc_length = 86 - 28 - len(loc_right_side)
+    justify_format(root, 'loc_data', loc_main_str, loc_length)
+    justify_format(root, 'loc_add', loc_add_str)
+    justify_format(root, 'loc_del', loc_del_str)
+    find_and_replace(root, 'loc_del_dots', '')
+
     etree.ElementTree(root).write(filename, encoding='utf-8', xml_declaration=True)
 
 
@@ -261,13 +281,14 @@ def justify_format(root, element_id, new_text, length=0):
         new_text = f"{'{:,}'.format(new_text)}"
     new_text = str(new_text)
     find_and_replace(root, element_id, new_text)
-    just_len = max(0, length - len(new_text))
-    if just_len <= 2:
-        dot_map = {0: '', 1: ' ', 2: '. '}
-        dot_string = dot_map[just_len]
-    else:
-        dot_string = ' ' + ('.' * just_len) + ' '
-    find_and_replace(root, f"{element_id}_dots", dot_string)
+    if length > 0:
+        just_len = max(0, length - len(new_text))
+        if just_len <= 2:
+            dot_map = {0: '', 1: ' ', 2: '. '}
+            dot_string = dot_map[just_len]
+        else:
+            dot_string = ' ' + ('.' * just_len) + ' '
+        find_and_replace(root, f"{element_id}_dots", dot_string)
 
 
 def find_and_replace(root, element_id, new_text):
