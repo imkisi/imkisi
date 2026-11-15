@@ -2,28 +2,12 @@
 
 <img src="banner.avif" width="max-content"> </img>
 
-Creative Developer & Illustrator focused on interactive systems and web experiences.</br>
-`TypeScript` · `JavaScript` · `Python` · `Svelte` · `WebGL / Three.js` · `Kotlin`
-
-[Website](https://kisilabs.my.id) · [LinkedIn](https://linkedin.com/in/bagas-d) · [Email](mailto:info@kisilabs.my.id.com) · [Instagram](https://instagram.com/gasswi_)
-
----
-
-### Rules of Creation, Distilled
-
-<table>
-  <tr>
-    <td width="50%" valign="top">
-
-- **Trust, Learn & Experiment:** Trust your space and process; pull all knowledge from teachers and peers; treat everything as an experiment; and embrace discipline as a guide with no fear of failure.
-
-    </td>
-    <td width="50%" valign="top">
-
-- **Work, Separate & Enjoy:** Focus entirely on doing the work; never create and analyze at the same time; stay happy and lighthearted; and remain open to breaking even your own rules.
-
-    </td>
-    </tr>
-  </table>
-
-<p align="right">© 2026 kisilabs. All rights reserved.</p>
+<div align="center">
+  <a href="https://kisilabs.my.id">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="dark_mode.svg">
+      <source media="(prefers-color-scheme: light)" srcset="light_mode.svg">
+      <img alt="imkisi neofetch profile card" src="dark_mode.svg" width="max-content">
+    </picture>
+  </a>
+</div>
