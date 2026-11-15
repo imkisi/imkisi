@@ -1,4 +1,5 @@
 name: Update Profile README
+
 on:
   schedule:
     - cron: '0 0 * * *'
@@ -13,17 +14,23 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
       - name: Set up Python 3.11
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+
       - name: Install dependencies
+        run: pip install lxml requests
+
       - name: Generate stats
         env:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           USER_NAME: imkisi
         run: python today.py
+
       - name: Commit and push updated SVGs
         run: |
           git config --local user.email "action@github.com"
